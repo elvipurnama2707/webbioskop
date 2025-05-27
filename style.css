@@ -1,0 +1,144 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #0e1626;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a1120;
+  padding: 15px 30px;
+}
+
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #1c2a45;
+}
+
+/* Film Detail Section */
+.film-detail {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.film-card {
+  display: flex;
+  gap: 30px;
+  max-width: 1000px;
+  background: linear-gradient(145deg, #111c30, #0a1627);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.film-poster {
+  width: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.film-info {
+  flex: 1;
+}
+
+.film-info h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.genre {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.age {
+  background-color: #ffffff1a;
+  border: 1px solid #888;
+  padding: 2px 6px;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
+.price {
+  color: #f8d248;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 20px;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 25px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid #ffffff33;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #ffffff22;
+  transform: scale(1.03);
+}
+
+.btn.primary {
+  background-color: #4d8eff;
+  color: #fff;
+  border: none;
+}
+
+.btn.primary:hover {
+  background-color: #3970d9;
+}
+
+/* Description and Meta */
+.description {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #d0d0d0;
+}
+
+.meta p {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 6px;
+}
