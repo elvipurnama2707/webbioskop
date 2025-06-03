@@ -1,27 +1,53 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
-  <title>Beranda - Bioskop</title>
+  <meta charset="UTF-8">
+  <title>Detail Film - Lokananta</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Selamat datang di Bioskop Online</h1>
-  <?php if (!isset($_SESSION['user'])): ?>
-    <a href="login.php">Masuk</a> | <a href="register.php">Daftar</a>
-  <?php else: ?>
-    <p>Halo, <?= $_SESSION['user']['nama'] ?> | <a href="logout.php">Keluar</a></p>
-  <?php endif; ?>
+  <header>
+    <nav class="navbar">
+      <div class="logo">BIOSKOP ONLINE</div>
+      <ul class="nav-links">
+        <li><a href="beranda.php">Beranda</a></li>
+        <li><a href="#">Film Saya</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="daftar.php">Daftar</a></li>
+        <li><a href="proses_register.php">Masuk</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <h2>Film Tersedia</h2>
-  <div>
-    <img src="image/lokanata.webp" alt="Lokananta" width="200">
-    <h3>Lokananta</h3>
-    <p>Drama | 13+ | 1 jam 26 menit</p>
-    <p>Rp 20.000</p>
-    <a href="detail_film.php?judul=Lokananta">Lihat</a>
-  </div>
+  <section class="film-detail">
+    <div class="film-card">
+      <img src="image/lokanata.webp" alt="Poster Lokananta" class="film-poster">
+      <div class="film-info">
+        <h1>LOKANANTA</h1>
+        <p class="genre">Drama <span class="age">13+</span> | 1 Jam 26 Menit</p>
+        <p class="price">Rp20.000</p>
+
+        <div class="button-group">
+          <a href="belitiket.php" class="btn primary">Beli Tiket</a>
+          <a href="#" class="btn">Daftarku</a>
+          <a href="#" class="btn">Trailer</a>
+          <a href="#" class="btn">Bagikan</a>
+        </div>
+
+        <p class="description">
+          ANANTA meninggalkan orangtuanya untuk mengejar karier musik dan bertemu LOKA. C;'inta mereka terhalang perbedaan agama, namun musik menyatukan mereka.
+        </p>
+
+        <div class="meta">
+          <p><strong>Pemeran:</strong> Fiedra Azalia, Brian Andrew, Syakir Daulay, Ray Sahetapy, Rinoa Aurora, Joune Ganda</p>
+          <p><strong>Rilis:</strong> 2024</p>
+          <p><strong>Penulis:</strong> -</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>

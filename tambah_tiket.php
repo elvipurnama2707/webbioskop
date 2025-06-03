@@ -1,13 +1,18 @@
-<?php
-include 'koneksi.php';
+<!DOCTYPE html>
+<html>
 
-$judul = $_POST['judul'];
-$gendre = $_POST['gendre'];
-$harga = $_POST['harga'];
+<head>
+  <title>Tambah Tiket</title>
+</head>
 
-$sql = "INSERT INTO tiket (judul, gendre, harga) VALUES ('$judul', '$gendre', $harga)";
-if ($conn->query($sql) === TRUE) {
-  header("Location: index.php");
-} else {
-  echo "Gagal menambahkan data: " . $conn->error;
-}
+<body>
+  <h2>Tambah Data Tiket</h2>
+  <form action="proses_tambah.php" method="post">
+    Judul: <input type="text" name="judul" required><br><br>
+    Genre: <input type="text" name="gendre" required><br><br>
+    Harga: <input type="number" name="harga" required><br><br>
+    <input type="submit" value="Simpan">
+  </form>
+</body>
+
+</html>
